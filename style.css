@@ -1,0 +1,296 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.chat {
+	width: 30%;
+	margin: 20px;
+}
+
+header {
+	border-radius: 4px 4px 0px 0px;
+	width: 100%;
+	background: #1F1F1F;
+	padding:20px;
+	clear:both;
+	content: '';
+	display: table;
+}
+
+header h1 {
+	color: #fff;
+	font-size: 30px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;	
+}
+header .users,
+header .search {
+	width: 50%;
+	float: left;
+}
+
+
+
+header a {
+	display: inline-block;
+	line-height: 30px;
+	color: #fff;
+	font-size: 16px;
+     font-family: 'Roboto Mono', monospace;
+	font-weight: bold;
+	text-decoration: none;
+}
+header a:hover {
+	text-decoration: underline;
+}
+
+header .search form {
+	position: relative;	
+}
+
+header input {
+	box-sizing: border-box;
+	width: 100%;
+	height: 30px;
+	padding-left: 30px;
+	font-family: 'Open Sans', sans-serif;	
+	font-size: 16px;
+	outline: none;
+}
+
+header input::placeholder {
+	color: grey;
+}
+
+header button {
+	box-sizing: border-box;
+	position: absolute;
+	background-color: transparent;
+	height: 30px;
+	width: 30px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+header button::before {
+	display: inline-block;
+	content: "\f002";
+	font-family: "Font Awesome 5 free", "Font Awesome 5 Brands";
+	font-weight: 900;
+	font-size: 16px;
+	color:gray;
+}
+
+
+
+
+/**/
+.chat-box {
+	position: relative;
+	height: 80vh;
+	padding:20px 20px 10px 20px;
+	background: #000;
+	overflow-y:scroll;
+}
+
+/* width */
+.chat-box::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.chat-box::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.chat-box::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.chat-box::-webkit-scrollbar-thumb:hover {
+  background: #A0A0A0; 
+}
+
+.chat-box_inner {
+	position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;	
+}
+
+.chat-box_inner .date {
+	background: #1A1A1A;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;	
+}
+
+.container {
+	min-width: 30%;	
+	margin: 10px;
+	padding:20px;
+	background: #fff;
+	border-radius: 4px;
+	clear: both;
+	content: '';
+	display: table;
+}
+
+.container-admin {
+	float: right;
+	min-width: 30%;
+	margin: 10px;
+	padding:20px;
+	background: #EFFDDE;
+	border-radius: 4px;
+	clear: both;
+	content: '';
+	display: table;	
+}
+
+.container .user-name,
+.container-admin .user-name {
+	color: #BB86FC;
+	font-size: 16px;	
+	font-family: 'Roboto Mono', monospace;	
+}
+.container .user-name:hover,
+.container-admin .user-name:hover {
+	cursor: pointer;
+}
+
+
+.container-admin .user-name {
+	color: green;
+}
+
+.container .message,
+.container-admin .message {
+	margin: 10px 0px;
+	color: #2E2E2E;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;	
+}
+
+.container .size,
+.container-admin .size {
+	float: left;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;	
+	color:#616161;
+}
+
+.container .time,
+.container-admin .time  {
+	float: right;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;	
+	color:#616161;	
+}
+
+
+
+
+
+/**/
+.enter-message {
+	width: 100%;
+}
+
+.enter-message form {
+	position: relative;
+	height: 150px;
+}
+
+.enter-message form textarea {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding:10px 40px;
+	background-color: #E1E1E1;
+	border-radius: 0px 0px 4px 4px;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	resize: none;	
+	border-top: none;	
+	outline:none;
+}
+
+.enter-message form .attach{
+	box-sizing: border-box;
+	position: absolute;
+	top:50%;
+	left:0px;
+	transform:  translate(0%,-50%);	
+	background-color: transparent;
+	height: 30px;
+	width: 30px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.enter-message form .attach::before {
+	display: inline-block;
+	transform: rotate(137deg);
+	content: "\f0c6";
+	font-family: "Font Awesome 5 free", "Font Awesome 5 Brands";
+	font-weight: 900;
+	font-size: 16px;
+	color:#616161;
+}
+
+.enter-message form .send{
+	box-sizing: border-box;
+	position: absolute;
+	top:50%;
+	right:0px;
+	transform:  translate(0%,-50%);	
+	border-radius: 0px 0px 4px 0px;
+	background-color: #23036A;
+	height: 100%;
+	width: 40px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.enter-message form .send::before {
+	display: inline-block;
+	content: "\f1d8";
+	font-family: "Font Awesome 5 free", "Font Awesome 5 Brands";
+	font-weight: 900;
+	font-size: 16px;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+	header .users,
+	header .search {
+		width: 100%;
+		float: none;
+	}
+}
